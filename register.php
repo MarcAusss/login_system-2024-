@@ -42,8 +42,8 @@
                 <label>Password</label>
                 <input type="password" name="password" placeholder="Password"><br>
 
-                <label>Re Password</label>
-                <input type="password" name="re_password" placeholder="Re_Password"><br>
+                <label>Confirm Password</label>
+                <input type="password" name="re_password" placeholder="Confirm Password"><br>
 
                 <div class="buttons">
                     <button type="submit">Sign Up</button>

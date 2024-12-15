@@ -20,24 +20,26 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 
 	$user_data = 'uname='. $uname. '&name='. $name;
 
-
+// <<--------------------- if username is empty --------------------->>
 	if (empty($uname)) {
 		header("Location: ../register.php?error=User Name is required&$user_data");
 	    exit();
+// <<--------------------- if password is empty --------------------->>
 	}else if(empty($pass)){
         header("Location: ../register.php?error=Password is required&$user_data");
 	    exit();
 	}
+// <<--------------------- if confirm password is empty --------------------->>
 	else if(empty($re_pass)){
-        header("Location: ../register.php?error=Re Password is required&$user_data");
+        header("Location: ../register.php?error=Confirm Password is required&$user_data");
 	    exit();
 	}
-
+// <<--------------------- if name is empty --------------------->>
 	else if(empty($name)){
         header("Location: ../register.php?error=Name is required&$user_data");
 	    exit();
 	}
-
+// <<--------------------- if password and confirm password does not match --------------------->>
 	else if($pass !== $re_pass){
         header("Location: ../register.php?error=The confirmation password  does not match&$user_data");
 	    exit();
@@ -52,6 +54,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])
 	    $sql = "SELECT * FROM users WHERE user_name='$uname' ";
 		$result = mysqli_query($conn, $sql);
 
+// <<--------------------- if username is already taken --------------------->>
 		if (mysqli_num_rows($result) > 0) {
 			header("Location: ../register.php?error=The username is taken try another&$user_data");
 	        exit();

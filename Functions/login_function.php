@@ -14,9 +14,11 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 	$uname = validate($_POST['uname']);
 	$pass = validate($_POST['password']);
 
+// <<--------------------- if username is empty --------------------->>
 	if (empty($uname)) {
 		header("Location: ../login.php?error=User Name is required");
 	    exit();
+// <<--------------------- if password is empty --------------------->>
 	}else if(empty($pass)){
         header("Location: ../login.php?error=Password is required");
 	    exit();
