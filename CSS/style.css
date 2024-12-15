@@ -1,0 +1,272 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: url('../img/bg.png') no-repeat center center/cover;
+    height: 100vh;
+    color: #fff;
+}
+
+/*------------------- Navbar -------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #405666;
+    position: fixed;
+    width: 90vw;
+    top: 0;
+    padding: 10px 100px;
+    z-index: 20;
+
+    .logo-container{
+        width: 206px;
+
+        a .logo {
+            width: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+        
+    .menu {
+        display: flex;
+        gap: 50px;
+        
+        .active{
+            background-color: white;
+            border-radius: 15px;
+            color: #1f89e0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 5px 15px;
+            text-transform: uppercase;
+        }
+        a:hover {
+            color: #1f89e0;
+            transition: .2s ease-in-out;
+        }
+    }
+
+    .right_nav{
+        display: flex;
+        align-items: center;
+
+        h1{
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 0 10px ;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 0 10px ;
+        }
+        a:hover {
+            color: #1f89e0;
+            transition: .2s ease-in-out;
+        }
+        .login{
+            border-right: 3px solid white;
+        }
+    }
+}
+
+/*------------------- End of  Navbar -------------------*/
+
+
+
+/*------------------- Landing Page -------------------*/
+
+
+.landing {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+    .container{
+        h1 {
+            font-size: 97px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            letter-spacing: 10px;
+        }
+
+        h2 {
+            font-size: 61px;
+            font-weight: bold;
+            margin: 10px 0 0;
+            letter-spacing: 10px;
+        }
+    }
+
+    .title{
+    position: absolute;
+    bottom: 100px;
+        p{
+            font-size: 35px;
+        }
+    }
+}
+
+
+
+/*------------------- End of Landing Page -------------------*/
+
+
+
+/*------------------- About Page -------------------*/
+
+.about{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 120px;
+
+
+    .intro{
+        h1{
+            font-size: 97px;
+            letter-spacing: 10px;
+            line-height: 0;
+        }
+        p{
+            text-align: justify;
+            font-size: 25px;
+            color: #32424D;
+            font-weight: 600;
+            padding: 0 400px;
+        }
+    }
+
+    .about-container{
+        display: flex;
+        gap: 20px;
+        width: 90vw;
+        justify-content: space-around;
+        align-items: start;
+
+        .box{
+            position: relative;
+            width: 438px;
+
+            .content{
+                margin-top: -70px;
+                
+                h1{
+                    font-size: 61px;
+                    letter-spacing: 5px;
+                }
+                p{
+                    font-size: 25px;
+                    letter-spacing: 4px;
+                }
+            }
+        }
+        .value{
+            img{
+                padding-top: 30px;
+                padding-bottom: 20px;
+            }
+            ul li{
+                text-align: left;
+                font-size: 25px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+}
+
+/*------------------- End of About Page -------------------*/
+
+
+
+
+/*------------------- Register Page -------------------*/
+
+.register-main-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .register-container {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+        text-align: center;
+        width: 100%;
+        max-width: 400px;
+        position: relative;
+    
+        img{
+            width: 150px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: black
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #000000;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-bottom: 2px solid #405666;
+            background: transparent;
+            font-size: 16px;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+        
+            button {
+                background: #3498db;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            button:hover {
+                background: #2980b9;
+            }
+        }
+        .error{
+            background-color: rgb(255, 64, 64);
+            padding: 10px ;
+        }
+    }
+}
+
+
+/*------------------- End of Register Page -------------------*/
